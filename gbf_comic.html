@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Title -->
+		<title>GBF Comic Viewer</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<style>
+		.white {
+			background-color: white;
+			padding: 3px;
+			border-radius: 3px;
+		}
+		
+		#comic img {
+			width:50%;
+		}
+		</style>
+	</head>
+  
+	<body class="bg-none">
+		<div class="container">
+			<div class="row" >
+				<div class="col-8" style="max-height:100vh;overflow: scroll;">
+					<div id="comic" onclick="comic_next(); return false;" style="cursor:pointer;"></div>
+				</div>
+				<div class="col-4">
+					<button id="prev" class="btn btn-outline-primary btn-block previous disabled"><a href="" onclick="comic_back(); return false;">Prev<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></a></button>
+					<button id="next" class="btn btn-primary btn-block next"><a href="" onclick="comic_next(); return false;" style="color:white;">Next<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></button>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="" style="position: fixed; top: 1%; right: 1%;">
+				<button type="button" class="btn btn-default btn-lg" onclick="open_menu();">
+					<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</button>
+			</div>
+		</div>
+		
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- Custom -->
+		<script src="js/gbfcomic.js"></script>
+	</body>
+</html>
